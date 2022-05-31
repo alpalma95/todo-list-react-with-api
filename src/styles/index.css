@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/bootstrap-icons.svg");
 
 :root {
   --border-color: rgb(231, 230, 230);
@@ -18,8 +17,6 @@ body {
 
 .App {
   margin-top: 5vh;
-  /* display: flex;
-  flex-direction: column; */
 }
 
 .header {
