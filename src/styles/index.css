@@ -1,12 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/bootstrap-icons.svg");
 
-/* 
+:root {
+  --border-color: rgb(231, 230, 230);
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
 
-*/
+body {
+  background-color: rgb(247, 241, 241);
+}
+
+.App {
+  margin-top: 5vh;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.header {
+  text-align: center;
+  font-size: 6rem;
+  font-weight: 100;
+  color: rgb(219, 166, 175);
+}
+
+.list {
+  border: 1px solid var(--border-color);
+  border-bottom: none;
+  width: min(90%, 40rem);
+  margin: 2vh auto 0;
+  font-size: 1.5rem;
+  background-color: white;
+  box-shadow: 0px 11px 40px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* Input */
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 1.5rem;
+  color: rgb(92, 92, 92);
+  padding: 1rem 3.5rem;
+}
+input:focus {
+  color: black;
+  outline: none;
+}
+
+/* Todo List */
+li {
+  list-style: none;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.todo-list {
+  padding-left: 2rem;
+}
+
+.todo-item {
+  padding: 1rem 1.5rem 1rem 3.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.todo-item__remove {
+  margin-left: auto;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  color: red;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.todo-item__remove:hover {
+  opacity: 1;
+}
+
+.items-counter {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: rgb(173, 173, 173);
+}
+
+/* Decoration boxes */
+
+.decoration-box {
+  background-color: white;
+  height: 0.9vh;
+}
+
+.decoration-box__1 {
+  width: min(89%, 39.5rem);
+  margin: 0 auto;
+  border-bottom: 1px solid var(--border-color);
+  opacity: 0.8;
+}
+
+.decoration-box__2 {
+  width: min(88%, 39rem);
+  margin: 0vh auto;
+  opacity: 0.7;
+}
