@@ -2,6 +2,7 @@
 
 :root {
   --border-color: rgb(231, 230, 230);
+  --primary: rgb(219, 166, 175);
 }
 
 * {
@@ -23,7 +24,7 @@ body {
   text-align: center;
   font-size: 6rem;
   font-weight: 100;
-  color: rgb(219, 166, 175);
+  color: var(--primary)
 }
 
 .list {
@@ -89,6 +90,28 @@ li {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   color: rgb(173, 173, 173);
+  display: flex;
+}
+
+.items-counter__btn {
+  display: inline-block;
+  margin-left: auto;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--primary);
+  background-color: white;
+  border-radius: 2px;
+  color: var(--primary)
+}
+
+.items-counter__btn:hover {
+  color: white;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
 }
 
 /* Decoration boxes */

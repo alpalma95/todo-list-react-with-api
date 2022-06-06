@@ -4,28 +4,40 @@ const Input = ({
 	input,
 	setInput,
 	todos,
-	setTodos,
-	setTodosEmpty,
 	counter,
 	setCounter,
+	setTodosLength,
 }) => {
 	const setInputHandler = (e) => {
 		setInput(e.target.value);
 	};
 
+	const putTodos = (arr) => {
+		fetch("https://assets.breatheco.de/apis/fake/todos/user/alpalma95", {
+			method: "PUT",
+			body: JSON.stringify(arr),
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+			.then((response) => response.json())
+			.catch((err) => console.log(err.message));
+	};
+
 	const newTodoHandler = (e) => {
 		if (e.key === "Enter" && e.target.value !== "") {
-			setTodos([
+			setInput("");
+			setCounter(counter + 1);
+			let newTodos = [
 				...todos,
 				{
-					id: `${Math.random() * 5000}`,
-					text: `${input}`,
-					finished: false,
+					id: Math.random() * 1000,
+					label: e.target.value,
+					done: false,
 				},
-			]);
-			setInput("");
-			setTodosEmpty(false);
-			setCounter(counter + 1);
+			];
+			putTodos(newTodos);
+			setTodosLength(newTodos.length);
 		}
 	};
 
